@@ -17,7 +17,7 @@ class ProductTest < ActiveSupport::TestCase
      respond_to do |format|
        if @product.save
          format.html { redirect_to @product, notice: 'Product was succesfully created.'}
-         format.json { render :show, status: :created, loaction @product}
+         format.json { render :show, status: :created, location @product}
        else
          puts @product.errors.full_messages
          format.html { render :new }
